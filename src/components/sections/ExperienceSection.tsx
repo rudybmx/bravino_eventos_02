@@ -39,37 +39,41 @@ export function ExperienceSection({
     const textCol = ref.current?.querySelector('.exp-text')
     const visualCol = ref.current?.querySelector('.exp-visual')
 
-    gsap.fromTo(
-      textCol,
-      { opacity: 0, x: flipLayout ? 24 : -24 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1.1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: ref.current,
-          start: '100px bottom',
-          toggleActions: 'play none none none',
-        },
-      }
-    )
-    gsap.fromTo(
-      visualCol,
-      { opacity: 0, x: flipLayout ? -24 : 24 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1.1,
-        ease: 'power3.out',
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: ref.current,
-          start: '100px bottom',
-          toggleActions: 'play none none none',
-        },
-      }
-    )
+    if (textCol) {
+      gsap.fromTo(
+        textCol,
+        { opacity: 0, x: flipLayout ? 24 : -24 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: ref.current,
+            start: '100px bottom',
+            toggleActions: 'play none none none',
+          },
+        }
+      )
+    }
+
+    if (visualCol) {
+      gsap.fromTo(
+        visualCol,
+        { opacity: 0, x: flipLayout ? -24 : 24 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: ref.current,
+            start: '100px bottom',
+            toggleActions: 'play none none none',
+          },
+        }
+      )
+    }
   }, { scope: ref })
 
   const textCol = (
