@@ -39,9 +39,9 @@ export default function MetricsStrip() {
     <section
       ref={ref}
       style={{
-        background: '#141109',
-        borderTop: '1px solid rgba(184,147,90,0.07)',
-        borderBottom: '1px solid rgba(184,147,90,0.07)',
+        background: '#7B1F35',
+        borderTop: '1px solid rgba(250,245,238,0.15)',
+        borderBottom: '1px solid rgba(250,245,238,0.15)',
         padding: '36px 32px',
       }}
     >
@@ -74,10 +74,10 @@ export default function MetricsStrip() {
             >
               <p
                 style={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)',
-                  fontWeight: 600,
-                  color: '#F0E8DC',
+                  fontWeight: 700,
+                  color: '#FAF5EE',
                   lineHeight: 1,
                   marginBottom: '6px',
                 }}
@@ -88,10 +88,10 @@ export default function MetricsStrip() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: '10px',
-                  fontWeight: 400,
+                  fontWeight: 500,
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
-                  color: 'rgba(240,232,220,0.45)',
+                  color: 'rgba(250, 245, 238, 0.7)',
                 }}
               >
                 {m.label}
@@ -104,7 +104,7 @@ export default function MetricsStrip() {
                 style={{
                   width: '1px',
                   height: '36px',
-                  background: 'rgba(184,147,90,0.25)',
+                  background: 'rgba(250,245,238,0.2)',
                   flexShrink: 0,
                 }}
               />

@@ -22,10 +22,10 @@ export default function Nav() {
         zIndex: 100,
         transition: 'background 0.5s ease, backdrop-filter 0.5s ease',
         background: scrolled
-          ? 'rgba(14,12,9,0.92)'
+          ? 'rgba(250, 245, 238, 0.78)'
           : 'transparent',
-        backdropFilter: scrolled ? 'blur(18px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(184,147,90,0.07)' : '1px solid transparent',
+        backdropFilter: scrolled ? 'blur(20px)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(123,31,53,0.08)' : '1px solid transparent',
       }}
     >
       <nav
@@ -43,11 +43,11 @@ export default function Nav() {
         <a
           href="#"
           style={{
-            fontFamily: "'Playfair Display', serif",
-            fontSize: '22px',
-            fontWeight: 700,
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: '20px',
+            fontWeight: 800,
             letterSpacing: '0.35em',
-            color: '#F0E8DC',
+            color: '#2D2320',
             textDecoration: 'none',
           }}
         >
@@ -72,12 +72,12 @@ export default function Nav() {
                 fontSize: '13px',
                 fontWeight: 400,
                 letterSpacing: '0.08em',
-                color: 'rgba(240,232,220,0.58)',
+                color: 'rgba(45,35,32,0.58)',
                 textDecoration: 'none',
                 transition: 'color 0.3s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#F0E8DC')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(240,232,220,0.58)')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#2D2320')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(45,35,32,0.58)')}
             >
               {item}
             </a>
@@ -94,21 +94,21 @@ export default function Nav() {
             fontSize: '13px',
             fontWeight: 500,
             letterSpacing: '0.08em',
-            color: '#B8935A',
+            color: '#7B1F35',
             textDecoration: 'none',
             padding: '9px 22px',
-            border: '1px solid rgba(184,147,90,0.6)',
+            border: '1px solid rgba(123,31,53,0.6)',
             borderRadius: '100px',
             transition: 'all 0.3s ease',
             whiteSpace: 'nowrap',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(184,147,90,0.12)'
-            e.currentTarget.style.borderColor = '#B8935A'
+            e.currentTarget.style.background = 'rgba(123,31,53,0.12)'
+            e.currentTarget.style.borderColor = '#7B1F35'
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = 'transparent'
-            e.currentTarget.style.borderColor = 'rgba(184,147,90,0.6)'
+            e.currentTarget.style.borderColor = 'rgba(123,31,53,0.6)'
           }}
         >
           Reservar
@@ -135,7 +135,7 @@ export default function Nav() {
                 display: 'block',
                 width: '24px',
                 height: '1px',
-                background: '#F0E8DC',
+                background: '#2D2320',
                 transition: 'all 0.3s ease',
               }}
             />
@@ -147,8 +147,9 @@ export default function Nav() {
       {menuOpen && (
         <div
           style={{
-            background: 'rgba(14,12,9,0.98)',
-            borderTop: '1px solid rgba(184,147,90,0.07)',
+            background: 'rgba(250, 245, 238, 0.98)',
+            backdropFilter: 'blur(20px)',
+            borderTop: '1px solid rgba(123,31,53,0.08)',
             padding: '24px 32px 32px',
             display: 'flex',
             flexDirection: 'column',
@@ -163,7 +164,7 @@ export default function Nav() {
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: '16px',
-                color: 'rgba(240,232,220,0.7)',
+                color: 'rgba(45,35,32,0.7)',
                 textDecoration: 'none',
               }}
             >
@@ -175,10 +176,10 @@ export default function Nav() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '14px',
-              color: '#B8935A',
+              color: '#7B1F35',
               textDecoration: 'none',
               padding: '10px 20px',
-              border: '1px solid rgba(184,147,90,0.6)',
+              border: '1px solid rgba(123,31,53,0.6)',
               borderRadius: '100px',
               textAlign: 'center',
             }}

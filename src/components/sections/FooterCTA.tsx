@@ -33,12 +33,12 @@ export default function FooterCTA() {
       {/* Main CTA block */}
       <div
         style={{
-          backgroundColor: '#0E0C09',
+          backgroundColor: '#FAF5EE',
           padding: '120px 32px 100px',
           textAlign: 'center',
           position: 'relative',
           overflow: 'hidden',
-          borderTop: '1px solid rgba(184,147,90,0.1)',
+          borderTop: '1px solid rgba(123,31,53,0.1)',
         }}
       >
         {/* Warm glow */}
@@ -48,7 +48,7 @@ export default function FooterCTA() {
             position: 'absolute',
             inset: 0,
             background:
-              'radial-gradient(ellipse 60% 50% at 50% 60%, rgba(184,147,90,0.07) 0%, transparent 68%)',
+              'radial-gradient(ellipse 60% 50% at 50% 60%, rgba(123,31,53,0.07) 0%, transparent 68%)',
             pointerEvents: 'none',
           }}
         />
@@ -60,7 +60,7 @@ export default function FooterCTA() {
             fontSize: '10px',
             letterSpacing: '0.25em',
             textTransform: 'uppercase',
-            color: 'rgba(184,147,90,0.7)',
+            color: 'rgba(123,31,53,0.7)',
             marginBottom: '36px',
             opacity: 0,
           }}
@@ -71,11 +71,11 @@ export default function FooterCTA() {
         <h2
           className="footer-anim"
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'DM Sans', sans-serif",
             fontSize: 'clamp(2.2rem, 6vw, 5rem)',
-            fontWeight: 700,
+            fontWeight: 800,
             lineHeight: 1.12,
-            color: '#F0E8DC',
+            color: '#2D2320',
             marginBottom: '28px',
             position: 'relative',
             opacity: 0,
@@ -85,7 +85,7 @@ export default function FooterCTA() {
           <br />
           experiência
           <br />
-          <em style={{ fontStyle: 'italic', color: 'rgba(240,232,220,0.68)' }}>
+          <em style={{ fontStyle: 'italic', color: 'rgba(45,35,32,0.68)' }}>
             e venha brindar.
           </em>
         </h2>
@@ -97,7 +97,7 @@ export default function FooterCTA() {
             fontSize: '15px',
             fontWeight: 300,
             lineHeight: 1.7,
-            color: 'rgba(240,232,220,0.5)',
+            color: 'rgba(45,35,32,0.5)',
             maxWidth: '480px',
             margin: '0 auto 52px',
             opacity: 0,
@@ -126,25 +126,25 @@ export default function FooterCTA() {
               fontSize: '14px',
               fontWeight: 600,
               letterSpacing: '0.06em',
-              color: '#0E0C09',
+              color: '#FAF5EE',
               textDecoration: 'none',
               padding: '16px 36px',
-              background: '#B8935A',
+              background: '#7B1F35',
               borderRadius: '100px',
               transition: 'all 0.35s ease',
-              border: '1px solid #B8935A',
-              boxShadow: '0 0 0 0 rgba(184,147,90,0)',
+              border: '1px solid #7B1F35',
+              boxShadow: '0 0 0 0 rgba(123,31,53,0)',
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLAnchorElement
               el.style.background = '#C9A46B'
-              el.style.boxShadow = '0 8px 40px rgba(184,147,90,0.3)'
+              el.style.boxShadow = '0 8px 40px rgba(123,31,53,0.3)'
               el.style.transform = 'translateY(-2px)'
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLAnchorElement
-              el.style.background = '#B8935A'
-              el.style.boxShadow = '0 0 0 0 rgba(184,147,90,0)'
+              el.style.background = '#7B1F35'
+              el.style.boxShadow = '0 0 0 0 rgba(123,31,53,0)'
               el.style.transform = 'translateY(0)'
             }}
           >
@@ -160,22 +160,22 @@ export default function FooterCTA() {
               fontSize: '14px',
               fontWeight: 400,
               letterSpacing: '0.05em',
-              color: 'rgba(240,232,220,0.58)',
+              color: 'rgba(45,35,32,0.58)',
               textDecoration: 'none',
               padding: '16px 36px',
-              border: '1px solid rgba(240,232,220,0.12)',
+              border: '1px solid rgba(45,35,32,0.12)',
               borderRadius: '100px',
               transition: 'all 0.3s ease',
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLAnchorElement
-              el.style.color = '#F0E8DC'
-              el.style.borderColor = 'rgba(240,232,220,0.28)'
+              el.style.color = '#2D2320'
+              el.style.borderColor = 'rgba(45,35,32,0.28)'
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLAnchorElement
-              el.style.color = 'rgba(240,232,220,0.58)'
-              el.style.borderColor = 'rgba(240,232,220,0.12)'
+              el.style.color = 'rgba(45,35,32,0.58)'
+              el.style.borderColor = 'rgba(45,35,32,0.12)'
             }}
           >
             Visitar loja online
@@ -186,9 +186,9 @@ export default function FooterCTA() {
       {/* Footer bar */}
       <div
         style={{
-          backgroundColor: '#090806',
-          borderTop: '1px solid rgba(184,147,90,0.07)',
-          padding: '28px 32px',
+          backgroundColor: '#2D2320',
+          borderTop: '1px solid rgba(123,31,53,0.12)',
+          padding: '36px 32px',
         }}
       >
         <div
@@ -204,11 +204,11 @@ export default function FooterCTA() {
         >
           <span
             style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: '16px',
-              fontWeight: 700,
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: '15px',
+              fontWeight: 800,
               letterSpacing: '0.3em',
-              color: 'rgba(240,232,220,0.5)',
+              color: 'rgba(250, 245, 238, 0.45)',
             }}
           >
             BRAVINO
@@ -232,17 +232,17 @@ export default function FooterCTA() {
                 key={item.label}
                 href={item.href}
                 target={item.href.startsWith('http') ? '_blank' : undefined}
-                rel="noopener noreferrer"
+                rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: '11px',
                   letterSpacing: '0.06em',
-                  color: 'rgba(240,232,220,0.3)',
+                  color: 'rgba(250, 245, 238, 0.55)',
                   textDecoration: 'none',
                   transition: 'color 0.3s ease',
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(240,232,220,0.65)' }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(240,232,220,0.3)' }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = '#FAF5EE' }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(250, 245, 238, 0.55)' }}
               >
                 {item.label}
               </a>

@@ -56,9 +56,9 @@ export default function FAQ() {
     <section
       ref={ref}
       style={{
-        backgroundColor: '#0E0C09',
+        backgroundColor: '#7B1F35',
         padding: '100px 32px',
-        borderBottom: '1px solid rgba(184,147,90,0.07)',
+        borderBottom: '1px solid rgba(250,245,238,0.12)',
       }}
     >
       <div style={{ maxWidth: '720px', margin: '0 auto' }}>
@@ -66,10 +66,10 @@ export default function FAQ() {
         <h2
           className="faq-anim"
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'DM Sans', sans-serif",
             fontSize: 'clamp(1.6rem, 3vw, 2.4rem)',
             fontWeight: 700,
-            color: '#F0E8DC',
+            color: '#FAF5EE',
             marginBottom: '56px',
             textAlign: 'center',
             opacity: 0,
@@ -85,7 +85,7 @@ export default function FAQ() {
               key={i}
               className="faq-anim"
               style={{
-                borderTop: '1px solid rgba(184,147,90,0.1)',
+                borderTop: '1px solid rgba(250,245,238,0.15)',
                 opacity: 0,
               }}
             >
@@ -109,7 +109,7 @@ export default function FAQ() {
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: '15px',
                     fontWeight: open === i ? 500 : 400,
-                    color: open === i ? '#F0E8DC' : 'rgba(240,232,220,0.7)',
+                    color: open === i ? '#FAF5EE' : 'rgba(250, 245, 238, 0.75)',
                     lineHeight: 1.4,
                     transition: 'color 0.3s ease',
                   }}
@@ -118,7 +118,7 @@ export default function FAQ() {
                 </span>
                 <span
                   style={{
-                    color: '#B8935A',
+                    color: '#C9A46B',
                     fontSize: '20px',
                     flexShrink: 0,
                     transform: open === i ? 'rotate(45deg)' : 'rotate(0deg)',
@@ -144,7 +144,7 @@ export default function FAQ() {
                     fontSize: '14px',
                     fontWeight: 300,
                     lineHeight: 1.8,
-                    color: 'rgba(240,232,220,0.55)',
+                    color: 'rgba(250, 245, 238, 0.65)',
                     paddingBottom: '24px',
                     paddingRight: '40px',
                   }}
@@ -156,7 +156,7 @@ export default function FAQ() {
           ))}
 
           {/* Last border */}
-          <div style={{ borderTop: '1px solid rgba(184,147,90,0.1)' }} />
+          <div style={{ borderTop: '1px solid rgba(250,245,238,0.15)' }} />
         </div>
       </div>
     </section>

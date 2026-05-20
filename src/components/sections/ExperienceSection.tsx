@@ -18,6 +18,7 @@ interface ExperienceSectionProps {
   flipLayout?: boolean
   glyphLetter: string
   extraContent?: React.ReactNode
+  bgImage?: string
 }
 
 export function ExperienceSection({
@@ -32,6 +33,7 @@ export function ExperienceSection({
   flipLayout = false,
   glyphLetter,
   extraContent,
+  bgImage,
 }: ExperienceSectionProps) {
   const ref = useRef<HTMLElement>(null)
 
@@ -101,9 +103,9 @@ export function ExperienceSection({
             fontWeight: 500,
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
-            color: '#B8935A',
+            color: '#7B1F35',
             padding: '5px 14px',
-            border: '1px solid rgba(184,147,90,0.45)',
+            border: '1px solid rgba(123,31,53,0.45)',
             borderRadius: '100px',
           }}
         >
@@ -115,7 +117,7 @@ export function ExperienceSection({
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '10px',
               letterSpacing: '0.12em',
-              color: 'rgba(240,232,220,0.38)',
+              color: 'rgba(45,35,32,0.38)',
               textTransform: 'uppercase',
             }}
           >
@@ -124,14 +126,13 @@ export function ExperienceSection({
         )}
       </div>
 
-      {/* Heading */}
       <h2
         style={{
-          fontFamily: "'Playfair Display', serif",
+          fontFamily: "'DM Sans', sans-serif",
           fontSize: 'clamp(1.6rem, 3vw, 2.35rem)',
-          fontWeight: 700,
+          fontWeight: 800,
           lineHeight: 1.2,
-          color: '#F0E8DC',
+          color: '#2D2320',
           marginBottom: '22px',
           maxWidth: '420px',
         }}
@@ -146,7 +147,7 @@ export function ExperienceSection({
           fontSize: '15px',
           fontWeight: 300,
           lineHeight: 1.85,
-          color: 'rgba(240,232,220,0.62)',
+          color: 'rgba(45,35,32,0.62)',
           marginBottom: '28px',
         }}
       >
@@ -170,10 +171,10 @@ export function ExperienceSection({
               fontSize: '11px',
               fontWeight: 400,
               letterSpacing: '0.08em',
-              color: 'rgba(240,232,220,0.5)',
+              color: 'rgba(45,35,32,0.5)',
               padding: '5px 12px',
-              background: 'rgba(240,232,220,0.04)',
-              border: '1px solid rgba(240,232,220,0.08)',
+              background: 'rgba(45,35,32,0.04)',
+              border: '1px solid rgba(45,35,32,0.08)',
               borderRadius: '100px',
             }}
           >
@@ -195,7 +196,7 @@ export function ExperienceSection({
           fontSize: '14px',
           fontWeight: 500,
           letterSpacing: '0.05em',
-          color: '#B8935A',
+          color: '#7B1F35',
           textDecoration: 'none',
           transition: 'gap 0.3s ease',
         }}
@@ -217,42 +218,64 @@ export function ExperienceSection({
       style={{
         flex: '1 1 340px',
         minHeight: '380px',
-        background: '#221D17',
-        borderRadius: '4px',
+        background: bgImage
+          ? `url(${bgImage}) center center / cover no-repeat`
+          : 'rgba(255, 255, 255, 0.45)',
+        backdropFilter: 'blur(16px)',
+        borderRadius: '8px',
         position: 'relative',
         overflow: 'hidden',
         opacity: 0,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        borderTop: '1px solid rgba(184,147,90,0.14)',
+        border: bgImage ? '1px solid rgba(255,255,255,0.15)' : '1px solid rgba(123,31,53,0.1)',
+        boxShadow: bgImage
+          ? '0 16px 48px rgba(45, 35, 32, 0.15)'
+          : '0 12px 40px rgba(123, 31, 53, 0.04)',
       }}
     >
       {/* Warm ambient glow */}
-      <div
-        aria-hidden
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background:
-            'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(184,147,90,0.07) 0%, transparent 70%)',
-        }}
-      />
+      {!bgImage && (
+        <div
+          aria-hidden
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background:
+              'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(123,31,53,0.07) 0%, transparent 70%)',
+          }}
+        />
+      )}
       {/* Typographic glyph */}
-      <span
-        aria-hidden
-        style={{
-          fontFamily: "'Playfair Display', serif",
-          fontSize: 'clamp(160px, 22vw, 280px)',
-          fontWeight: 800,
-          color: 'rgba(184,147,90,0.06)',
-          lineHeight: 1,
-          userSelect: 'none',
-          letterSpacing: '-0.05em',
-        }}
-      >
-        {glyphLetter}
-      </span>
+      {!bgImage && (
+        <span
+          aria-hidden
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 'clamp(140px, 20vw, 250px)',
+            fontWeight: 800,
+            color: 'rgba(123,31,53,0.06)',
+            lineHeight: 1,
+            userSelect: 'none',
+            letterSpacing: '-0.05em',
+          }}
+        >
+          {glyphLetter}
+        </span>
+      )}
+      {/* Subtle blend overlay for image */}
+      {bgImage && (
+        <div
+          aria-hidden
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to bottom, rgba(45, 35, 32, 0) 60%, rgba(45, 35, 32, 0.3) 100%)',
+            pointerEvents: 'none',
+          }}
+        />
+      )}
       {/* Gold corner accent */}
       <div
         aria-hidden
@@ -262,8 +285,8 @@ export function ExperienceSection({
           right: '24px',
           width: '40px',
           height: '40px',
-          borderRight: '1px solid rgba(184,147,90,0.3)',
-          borderBottom: '1px solid rgba(184,147,90,0.3)',
+          borderRight: bgImage ? '2px solid rgba(255,255,255,0.85)' : '1px solid rgba(123,31,53,0.3)',
+          borderBottom: bgImage ? '2px solid rgba(255,255,255,0.85)' : '1px solid rgba(123,31,53,0.3)',
         }}
       />
       <div
@@ -274,8 +297,8 @@ export function ExperienceSection({
           left: '24px',
           width: '40px',
           height: '40px',
-          borderLeft: '1px solid rgba(184,147,90,0.3)',
-          borderTop: '1px solid rgba(184,147,90,0.3)',
+          borderLeft: bgImage ? '2px solid rgba(255,255,255,0.85)' : '1px solid rgba(123,31,53,0.3)',
+          borderTop: bgImage ? '2px solid rgba(255,255,255,0.85)' : '1px solid rgba(123,31,53,0.3)',
         }}
       />
     </div>
@@ -286,9 +309,9 @@ export function ExperienceSection({
       ref={ref}
       id={id}
       style={{
-        backgroundColor: '#0E0C09',
+        backgroundColor: '#FAF5EE',
         padding: '100px 32px',
-        borderBottom: '1px solid rgba(184,147,90,0.07)',
+        borderBottom: '1px solid rgba(123,31,53,0.07)',
       }}
     >
       <div

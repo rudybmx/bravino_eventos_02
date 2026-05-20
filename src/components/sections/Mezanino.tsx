@@ -56,9 +56,9 @@ export default function Mezanino() {
       ref={ref}
       id="mezanino"
       style={{
-        backgroundColor: '#181410',
+        backgroundColor: '#7B1F35',
         padding: '100px 32px',
-        borderBottom: '1px solid rgba(184,147,90,0.07)',
+        borderBottom: '1px solid rgba(250,245,238,0.12)',
       }}
     >
       <div
@@ -79,9 +79,9 @@ export default function Mezanino() {
               fontWeight: 500,
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              color: '#B8935A',
+              color: '#FAF5EE',
               padding: '5px 14px',
-              border: '1px solid rgba(184,147,90,0.45)',
+              border: '1px solid rgba(250,245,238,0.45)',
               borderRadius: '100px',
             }}
           >
@@ -103,11 +103,11 @@ export default function Mezanino() {
             <h2
               className="mez-anim"
               style={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'DM Sans', sans-serif",
                 fontSize: 'clamp(1.6rem, 3vw, 2.35rem)',
-                fontWeight: 700,
+                fontWeight: 800,
                 lineHeight: 1.2,
-                color: '#F0E8DC',
+                color: '#FAF5EE',
                 marginBottom: '22px',
                 opacity: 0,
               }}
@@ -121,7 +121,7 @@ export default function Mezanino() {
                 fontSize: '15px',
                 fontWeight: 300,
                 lineHeight: 1.85,
-                color: 'rgba(240,232,220,0.62)',
+                color: 'rgba(250, 245, 238, 0.75)',
                 marginBottom: '40px',
                 opacity: 0,
               }}
@@ -146,18 +146,26 @@ export default function Mezanino() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: '13px',
-                  fontWeight: 500,
+                  fontWeight: 600,
                   letterSpacing: '0.06em',
-                  color: '#0E0C09',
+                  color: '#7B1F35',
                   textDecoration: 'none',
                   padding: '12px 26px',
-                  background: '#B8935A',
+                  background: '#FAF5EE',
                   borderRadius: '100px',
                   transition: 'all 0.3s ease',
-                  border: '1px solid #B8935A',
+                  border: '1px solid #FAF5EE',
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = '#C9A46B' }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = '#B8935A' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#C9A46B'
+                  e.currentTarget.style.borderColor = '#C9A46B'
+                  e.currentTarget.style.color = '#FAF5EE'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#FAF5EE'
+                  e.currentTarget.style.borderColor = '#FAF5EE'
+                  e.currentTarget.style.color = '#7B1F35'
+                }}
               >
                 Reservar o Mezanino
               </a>
@@ -170,15 +178,21 @@ export default function Mezanino() {
                   fontSize: '13px',
                   fontWeight: 400,
                   letterSpacing: '0.06em',
-                  color: 'rgba(240,232,220,0.6)',
+                  color: 'rgba(250, 245, 238, 0.8)',
                   textDecoration: 'none',
                   padding: '12px 26px',
-                  border: '1px solid rgba(240,232,220,0.12)',
+                  border: '1px solid rgba(250, 245, 238, 0.25)',
                   borderRadius: '100px',
                   transition: 'all 0.3s ease',
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.color = '#F0E8DC' }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(240,232,220,0.6)' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#FAF5EE'
+                  e.currentTarget.style.borderColor = 'rgba(250, 245, 238, 0.6)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'rgba(250, 245, 238, 0.8)'
+                  e.currentTarget.style.borderColor = 'rgba(250, 245, 238, 0.25)'
+                }}
               >
                 Falar com especialista
               </a>
@@ -191,7 +205,7 @@ export default function Mezanino() {
               flex: '1 1 360px',
               display: 'grid',
               gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: '2px',
+              gap: '12px',
             }}
           >
             {mezItems.map((item, i) => (
@@ -200,17 +214,21 @@ export default function Mezanino() {
                 className="mez-anim"
                 style={{
                   padding: '30px 24px',
-                  background: '#221D17',
-                  borderTop: '1px solid rgba(184,147,90,0.18)',
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  backdropFilter: 'blur(12px)',
+                  borderRadius: '8px',
+                  border: '1px solid rgba(250, 245, 238, 0.12)',
+                  boxShadow: '0 8px 32px rgba(14, 12, 9, 0.05)',
                   opacity: 0,
                 }}
               >
                 <span
                   style={{
-                    fontFamily: "'Playfair Display', serif",
+                    fontFamily: "'DM Sans', sans-serif",
                     fontStyle: 'italic',
                     fontSize: '13px',
-                    color: 'rgba(184,147,90,0.7)',
+                    fontWeight: 500,
+                    color: '#C9A46B',
                     display: 'block',
                     marginBottom: '10px',
                   }}
@@ -222,7 +240,7 @@ export default function Mezanino() {
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: '14px',
                     fontWeight: 500,
-                    color: '#F0E8DC',
+                    color: '#FAF5EE',
                     marginBottom: '8px',
                     lineHeight: 1.3,
                   }}
@@ -235,7 +253,7 @@ export default function Mezanino() {
                     fontSize: '12px',
                     fontWeight: 300,
                     lineHeight: 1.6,
-                    color: 'rgba(240,232,220,0.5)',
+                    color: 'rgba(250, 245, 238, 0.65)',
                   }}
                 >
                   {item.body}

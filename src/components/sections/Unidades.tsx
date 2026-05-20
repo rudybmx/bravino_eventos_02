@@ -59,9 +59,9 @@ export default function Unidades() {
     <section
       ref={ref}
       style={{
-        backgroundColor: '#181410',
+        backgroundColor: '#F2EAE0',
         padding: '100px 32px',
-        borderBottom: '1px solid rgba(184,147,90,0.07)',
+        borderBottom: '1px solid rgba(123,31,53,0.07)',
       }}
     >
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
@@ -69,11 +69,11 @@ export default function Unidades() {
         <h2
           className="unit-anim"
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'DM Sans', sans-serif",
             fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-            fontWeight: 700,
+            fontWeight: 800,
             lineHeight: 1.15,
-            color: '#F0E8DC',
+            color: '#2D2320',
             marginBottom: '64px',
             textAlign: 'center',
             opacity: 0,
@@ -95,20 +95,40 @@ export default function Unidades() {
               key={u.name}
               className="unit-anim"
               style={{
-                background: u.highlight ? '#221D17' : '#1a1510',
+                background: u.highlight ? 'rgba(255, 255, 255, 0.65)' : 'rgba(255, 255, 255, 0.35)',
+                backdropFilter: 'blur(12px)',
+                borderRadius: '12px',
+                border: '1px solid rgba(123,31,53,0.08)',
                 borderTop: u.highlight
-                  ? '1px solid rgba(184,147,90,0.35)'
-                  : '1px solid rgba(184,147,90,0.12)',
+                  ? '3px solid #7B1F35'
+                  : '1px solid rgba(123,31,53,0.08)',
                 padding: '44px 40px',
                 opacity: 0,
                 position: 'relative',
-                transition: 'transform 0.4s ease',
+                boxShadow: u.highlight
+                  ? '0 16px 48px rgba(123,31,53,0.07)'
+                  : '0 8px 32px rgba(123,31,53,0.02)',
+                transition: 'all 0.4s ease',
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-3px)'
+                const el = e.currentTarget as HTMLDivElement
+                el.style.transform = 'translateY(-5px)'
+                if (u.highlight) {
+                  el.style.boxShadow = '0 24px 56px rgba(123,31,53,0.12)'
+                } else {
+                  el.style.boxShadow = '0 16px 40px rgba(123,31,53,0.05)'
+                  el.style.background = 'rgba(255, 255, 255, 0.45)'
+                }
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'
+                const el = e.currentTarget as HTMLDivElement
+                el.style.transform = 'translateY(0)'
+                if (u.highlight) {
+                  el.style.boxShadow = '0 16px 48px rgba(123,31,53,0.07)'
+                } else {
+                  el.style.boxShadow = '0 8px 32px rgba(123,31,53,0.02)'
+                  el.style.background = 'rgba(255, 255, 255, 0.35)'
+                }
               }}
             >
               {/* Tag */}
@@ -118,12 +138,12 @@ export default function Unidades() {
                     display: 'inline-block',
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: '9px',
-                    fontWeight: 500,
+                    fontWeight: 600,
                     letterSpacing: '0.2em',
                     textTransform: 'uppercase',
-                    color: '#B8935A',
+                    color: '#7B1F35',
                     padding: '4px 12px',
-                    border: '1px solid rgba(184,147,90,0.45)',
+                    border: '1px solid rgba(123,31,53,0.45)',
                     borderRadius: '100px',
                     marginBottom: '20px',
                   }}
@@ -131,14 +151,14 @@ export default function Unidades() {
                   {u.tag}
                 </span>
               )}
-
+ 
               {/* Name */}
               <h3
                 style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: '1.5rem',
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: '1.4rem',
                   fontWeight: 700,
-                  color: '#F0E8DC',
+                  color: u.highlight ? '#7B1F35' : '#2D2320',
                   marginBottom: '20px',
                   marginTop: u.tag ? '0' : '28px',
                 }}
@@ -147,7 +167,7 @@ export default function Unidades() {
               </h3>
 
               {/* Divider */}
-              <div style={{ width: '32px', height: '1px', background: 'rgba(184,147,90,0.3)', marginBottom: '24px' }} />
+              <div style={{ width: '32px', height: '1px', background: 'rgba(123,31,53,0.3)', marginBottom: '24px' }} />
 
               {/* Address */}
               <p
@@ -155,7 +175,7 @@ export default function Unidades() {
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: '13px',
                   fontWeight: 400,
-                  color: 'rgba(240,232,220,0.65)',
+                  color: 'rgba(45,35,32,0.65)',
                   lineHeight: 1.6,
                   marginBottom: u.subAddress ? '4px' : '16px',
                 }}
@@ -167,7 +187,7 @@ export default function Unidades() {
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: '12px',
-                    color: 'rgba(240,232,220,0.38)',
+                    color: 'rgba(45,35,32,0.38)',
                     marginBottom: '16px',
                   }}
                 >
@@ -176,11 +196,11 @@ export default function Unidades() {
               )}
 
               {/* Hours */}
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: 'rgba(240,232,220,0.55)', marginBottom: '4px' }}>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: 'rgba(45,35,32,0.55)', marginBottom: '4px' }}>
                 {u.hours1}
               </p>
               {u.hours2 && (
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: 'rgba(240,232,220,0.55)', marginBottom: '20px' }}>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: 'rgba(45,35,32,0.55)', marginBottom: '20px' }}>
                   {u.hours2}
                 </p>
               )}
@@ -188,7 +208,7 @@ export default function Unidades() {
               {/* Phones */}
               <div style={{ marginBottom: '24px', marginTop: u.hours2 ? '0' : '20px' }}>
                 {u.phones.map((p) => (
-                  <p key={p} style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: 'rgba(240,232,220,0.45)', marginBottom: '2px' }}>
+                  <p key={p} style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: 'rgba(45,35,32,0.45)', marginBottom: '2px' }}>
                     {p}
                   </p>
                 ))}
@@ -197,11 +217,12 @@ export default function Unidades() {
               {/* Essence */}
               <p
                 style={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontStyle: 'italic',
-                  fontSize: '14px',
-                  color: 'rgba(184,147,90,0.65)',
-                  borderTop: '1px solid rgba(184,147,90,0.1)',
+                  fontSize: '13px',
+                  fontWeight: 500,
+                  color: 'rgba(123,31,53,0.7)',
+                  borderTop: '1px solid rgba(123,31,53,0.1)',
                   paddingTop: '20px',
                 }}
               >

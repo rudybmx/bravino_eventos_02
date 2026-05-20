@@ -55,9 +55,9 @@ export default function Diferenciais() {
     <section
       ref={ref}
       style={{
-        backgroundColor: '#0E0C09',
+        backgroundColor: '#FAF5EE',
         padding: '100px 32px',
-        borderBottom: '1px solid rgba(184,147,90,0.07)',
+        borderBottom: '1px solid rgba(123,31,53,0.07)',
       }}
     >
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
@@ -70,7 +70,7 @@ export default function Diferenciais() {
             fontWeight: 400,
             letterSpacing: '0.25em',
             textTransform: 'uppercase',
-            color: '#B8935A',
+            color: '#7B1F35',
             marginBottom: '20px',
             opacity: 0,
           }}
@@ -82,18 +82,18 @@ export default function Diferenciais() {
         <h2
           className="dif-anim"
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'DM Sans', sans-serif",
             fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
             fontWeight: 700,
             lineHeight: 1.15,
-            color: '#F0E8DC',
+            color: '#2D2320',
             marginBottom: '72px',
             maxWidth: '560px',
             opacity: 0,
           }}
         >
           Mais do que uma adega.{' '}
-          <em style={{ fontStyle: 'italic', color: 'rgba(240,232,220,0.72)' }}>
+          <em style={{ fontStyle: 'italic', color: 'rgba(45,35,32,0.72)' }}>
             Um Wine Concept.
           </em>
         </h2>
@@ -112,27 +112,46 @@ export default function Diferenciais() {
               className="dif-anim"
               style={{
                 padding: '40px 32px',
-                background: '#221D17',
-                borderTop: '1px solid rgba(184,147,90,0.2)',
+                background: 'var(--card-bg, rgba(255, 255, 255, 0.45))',
+                backdropFilter: 'blur(12px)',
+                borderRadius: '8px',
+                border: '1px solid var(--card-border, rgba(123, 31, 53, 0.08))',
+                boxShadow: '0 8px 32px rgba(123, 31, 53, 0.01)',
                 opacity: 0,
-                transition: 'background 0.3s ease',
+                transition: 'all 0.35s ease',
+                transform: 'translateY(0)',
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.background = '#2a241c'
+                const el = e.currentTarget as HTMLDivElement
+                el.style.setProperty('--card-bg', '#7B1F35')
+                el.style.setProperty('--card-border', '#7B1F35')
+                el.style.setProperty('--card-text', '#FAF5EE')
+                el.style.setProperty('--card-text-sub', 'rgba(250, 245, 238, 0.85)')
+                el.style.setProperty('--card-num', 'rgba(250, 245, 238, 0.6)')
+                el.style.transform = 'translateY(-4px)'
+                el.style.boxShadow = '0 12px 40px rgba(123, 31, 53, 0.15)'
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.background = '#221D17'
+                const el = e.currentTarget as HTMLDivElement
+                el.style.setProperty('--card-bg', 'rgba(255, 255, 255, 0.45)')
+                el.style.setProperty('--card-border', 'rgba(123, 31, 53, 0.08)')
+                el.style.setProperty('--card-text', '#2D2320')
+                el.style.setProperty('--card-text-sub', 'rgba(45, 35, 32, 0.5)')
+                el.style.setProperty('--card-num', 'rgba(123, 31, 53, 0.6)')
+                el.style.transform = 'translateY(0)'
+                el.style.boxShadow = '0 8px 32px rgba(123, 31, 53, 0.01)'
               }}
             >
               <span
                 style={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'DM Sans', sans-serif",
                   fontSize: '11px',
                   fontStyle: 'italic',
-                  color: 'rgba(184,147,90,0.55)',
+                  color: 'var(--card-num, rgba(123,31,53,0.55))',
                   display: 'block',
                   marginBottom: '20px',
                   letterSpacing: '0.1em',
+                  transition: 'color 0.3s ease',
                 }}
               >
                 {d.num}
@@ -142,9 +161,10 @@ export default function Diferenciais() {
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: '15px',
                   fontWeight: 500,
-                  color: '#F0E8DC',
+                  color: 'var(--card-text, #2D2320)',
                   marginBottom: '12px',
                   lineHeight: 1.35,
+                  transition: 'color 0.3s ease',
                 }}
               >
                 {d.title}
@@ -155,7 +175,8 @@ export default function Diferenciais() {
                   fontSize: '13px',
                   fontWeight: 300,
                   lineHeight: 1.75,
-                  color: 'rgba(240,232,220,0.5)',
+                  color: 'var(--card-text-sub, rgba(45,35,32,0.5))',
+                  transition: 'color 0.3s ease',
                 }}
               >
                 {d.body}

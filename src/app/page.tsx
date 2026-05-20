@@ -27,6 +27,7 @@ export default function Home() {
         ctaHref="https://wa.me/5543991231069"
         glyphLetter="W"
         flipLayout={false}
+        bgImage="https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/landing_pages/bravino/confra_eventos_bravino.png"
       />
 
       {/* VINHO NO DECK */}
@@ -41,6 +42,7 @@ export default function Home() {
         ctaHref="https://instagram.com/bravinowine"
         glyphLetter="D"
         flipLayout={true}
+        bgImage="https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/landing_pages/bravino/boamusica_evento_bravino.png"
       />
 
       <Mezanino />
