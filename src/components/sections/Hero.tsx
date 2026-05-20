@@ -84,7 +84,7 @@ export default function Hero() {
             fontWeight: 500,
             letterSpacing: '0.28em',
             textTransform: 'uppercase',
-            color: '#7B1F35',
+            color: '#C9A46B',
             marginBottom: '32px',
             opacity: 0,
           }}
@@ -101,7 +101,7 @@ export default function Hero() {
             fontWeight: 800,
             lineHeight: 1.08,
             letterSpacing: '-0.02em',
-            color: '#2D2320',
+            color: '#FAF5EE',
             maxWidth: '820px',
             marginBottom: '28px',
             opacity: 0,
@@ -119,7 +119,7 @@ export default function Hero() {
             fontSize: 'clamp(1rem, 1.8vw, 1.25rem)',
             fontWeight: 400,
             lineHeight: 1.7,
-            color: 'rgba(45,35,32,0.72)',
+            color: 'rgba(250, 245, 238, 0.8)',
             maxWidth: '520px',
             marginBottom: '52px',
             opacity: 0,
@@ -145,20 +145,22 @@ export default function Hero() {
               fontSize: '14px',
               fontWeight: 500,
               letterSpacing: '0.05em',
-              color: '#7B1F35',
+              color: '#FAF5EE',
               textDecoration: 'none',
               padding: '14px 32px',
-              border: '1px solid rgba(123,31,53,0.7)',
+              border: '1px solid rgba(250, 245, 238, 0.55)',
               borderRadius: '100px',
               transition: 'all 0.35s ease',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'rgba(123,31,53,0.1)'
-              e.currentTarget.style.borderColor = '#7B1F35'
+              e.currentTarget.style.background = '#FAF5EE'
+              e.currentTarget.style.color = '#7B1F35'
+              e.currentTarget.style.borderColor = '#FAF5EE'
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = 'transparent'
-              e.currentTarget.style.borderColor = 'rgba(123,31,53,0.7)'
+              e.currentTarget.style.color = '#FAF5EE'
+              e.currentTarget.style.borderColor = 'rgba(250, 245, 238, 0.55)'
             }}
           >
             Explorar experiências
@@ -171,20 +173,20 @@ export default function Hero() {
               fontSize: '14px',
               fontWeight: 400,
               letterSpacing: '0.05em',
-              color: 'rgba(45,35,32,0.6)',
+              color: 'rgba(250, 245, 238, 0.7)',
               textDecoration: 'none',
               padding: '14px 32px',
-              border: '1px solid rgba(45,35,32,0.12)',
+              border: '1px solid rgba(250, 245, 238, 0.2)',
               borderRadius: '100px',
               transition: 'all 0.35s ease',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(45,35,32,0.28)'
-              e.currentTarget.style.color = '#2D2320'
+              e.currentTarget.style.borderColor = 'rgba(250, 245, 238, 0.65)'
+              e.currentTarget.style.color = '#FAF5EE'
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(45,35,32,0.12)'
-              e.currentTarget.style.color = 'rgba(45,35,32,0.6)'
+              e.currentTarget.style.borderColor = 'rgba(250, 245, 238, 0.2)'
+              e.currentTarget.style.color = 'rgba(250, 245, 238, 0.7)'
             }}
           >
             Ver programação
@@ -214,7 +216,7 @@ export default function Hero() {
             fontSize: '9px',
             letterSpacing: '0.22em',
             textTransform: 'uppercase',
-            color: 'rgba(45,35,32,0.3)',
+            color: 'rgba(250, 245, 238, 0.4)',
           }}
         >
           Scroll
@@ -225,7 +227,7 @@ export default function Hero() {
             width: '1px',
             height: '48px',
             background:
-              'linear-gradient(to bottom, rgba(123,31,53,0.7), transparent)',
+              'linear-gradient(to bottom, rgba(250, 245, 238, 0.7), transparent)',
             transformOrigin: 'top center',
           }}
         />

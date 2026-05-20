@@ -43,15 +43,24 @@ export default function Nav() {
         <a
           href="#"
           style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: '20px',
-            fontWeight: 800,
-            letterSpacing: '0.35em',
-            color: '#2D2320',
+            display: 'flex',
+            alignItems: 'center',
             textDecoration: 'none',
           }}
         >
-          BRAVINO
+          <img
+            src={
+              scrolled
+                ? 'https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/landing_pages/bravino/logo_bravino_vermelha.png'
+                : 'https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/landing_pages/bravino/logo_bravino_branca.png'
+            }
+            alt="Bravino"
+            style={{
+              height: '24px',
+              width: 'auto',
+              transition: 'opacity 0.3s ease',
+            }}
+          />
         </a>
 
         {/* Desktop Links */}
@@ -72,12 +81,12 @@ export default function Nav() {
                 fontSize: '13px',
                 fontWeight: 400,
                 letterSpacing: '0.08em',
-                color: 'rgba(45,35,32,0.58)',
+                color: scrolled ? 'rgba(45,35,32,0.58)' : 'rgba(250, 245, 238, 0.65)',
                 textDecoration: 'none',
                 transition: 'color 0.3s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#2D2320')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(45,35,32,0.58)')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = scrolled ? '#2D2320' : '#FAF5EE')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = scrolled ? 'rgba(45,35,32,0.58)' : 'rgba(250, 245, 238, 0.65)')}
             >
               {item}
             </a>
@@ -94,21 +103,21 @@ export default function Nav() {
             fontSize: '13px',
             fontWeight: 500,
             letterSpacing: '0.08em',
-            color: '#7B1F35',
+            color: scrolled ? '#7B1F35' : '#FAF5EE',
             textDecoration: 'none',
             padding: '9px 22px',
-            border: '1px solid rgba(123,31,53,0.6)',
+            border: scrolled ? '1px solid rgba(123,31,53,0.6)' : '1px solid rgba(250, 245, 238, 0.5)',
             borderRadius: '100px',
             transition: 'all 0.3s ease',
             whiteSpace: 'nowrap',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(123,31,53,0.12)'
-            e.currentTarget.style.borderColor = '#7B1F35'
+            e.currentTarget.style.background = scrolled ? 'rgba(123,31,53,0.12)' : 'rgba(250, 245, 238, 0.12)'
+            e.currentTarget.style.borderColor = scrolled ? '#7B1F35' : '#FAF5EE'
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = 'transparent'
-            e.currentTarget.style.borderColor = 'rgba(123,31,53,0.6)'
+            e.currentTarget.style.borderColor = scrolled ? 'rgba(123,31,53,0.6)' : 'rgba(250, 245, 238, 0.5)'
           }}
         >
           Reservar
@@ -135,7 +144,7 @@ export default function Nav() {
                 display: 'block',
                 width: '24px',
                 height: '1px',
-                background: '#2D2320',
+                background: scrolled ? '#2D2320' : '#FAF5EE',
                 transition: 'all 0.3s ease',
               }}
             />

@@ -188,7 +188,7 @@ export default function FooterCTA() {
         style={{
           backgroundColor: '#2D2320',
           borderTop: '1px solid rgba(123,31,53,0.12)',
-          padding: '36px 32px',
+          padding: '48px 32px 36px',
         }}
       >
         <div
@@ -196,57 +196,141 @@ export default function FooterCTA() {
             maxWidth: '1100px',
             margin: '0 auto',
             display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: '16px',
+            flexDirection: 'column',
+            gap: '32px',
           }}
         >
-          <span
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '15px',
-              fontWeight: 800,
-              letterSpacing: '0.3em',
-              color: 'rgba(250, 245, 238, 0.45)',
-            }}
-          >
-            BRAVINO
-          </span>
-
+          {/* Top Row: Logo & Contact Links */}
           <div
             style={{
               display: 'flex',
               flexWrap: 'wrap',
-              gap: '24px',
+              justifyContent: 'space-between',
               alignItems: 'center',
+              gap: '24px',
             }}
           >
-            {[
-              { label: 'bravino.com.br', href: 'https://bravino.com.br' },
-              { label: '(43) 3321-0036', href: 'tel:+554333210036' },
-              { label: 'contato@bravino.com.br', href: 'mailto:contato@bravino.com.br' },
-              { label: '@bravinowine', href: 'https://instagram.com/bravinowine' },
-            ].map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target={item.href.startsWith('http') ? '_blank' : undefined}
-                rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            <img
+              src="https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/landing_pages/bravino/logo_bravino_branca.png"
+              alt="Bravino"
+              style={{
+                height: '24px',
+                width: 'auto',
+                opacity: 0.85,
+              }}
+            />
+
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '24px',
+                alignItems: 'center',
+              }}
+            >
+              {[
+                { label: 'bravino.com.br', href: 'https://bravino.com.br' },
+                { label: '(43) 3321-0036', href: 'tel:+554333210036' },
+                { label: 'contato@bravino.com.br', href: 'mailto:contato@bravino.com.br' },
+                { label: '@bravinowine', href: 'https://instagram.com/bravinowine' },
+              ].map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target={item.href.startsWith('http') ? '_blank' : undefined}
+                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: '11px',
+                    letterSpacing: '0.06em',
+                    color: 'rgba(250, 245, 238, 0.55)',
+                    textDecoration: 'none',
+                    transition: 'color 0.3s ease',
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = '#FAF5EE' }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(250, 245, 238, 0.55)' }}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Elegant thin divider */}
+          <div
+            style={{
+              height: '1px',
+              backgroundColor: 'rgba(250, 245, 238, 0.08)',
+              width: '100%',
+            }}
+          />
+
+          {/* Bottom Row: Copyright & OP7 Attribution */}
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              gap: '16px',
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: '11px',
+                color: 'rgba(250, 245, 238, 0.35)',
+              }}
+            >
+              &copy; {new Date().getFullYear()} Bravino. Todos os direitos reservados.
+            </span>
+
+            {/* OP7 Developer Signature */}
+            <a
+              href="https://www.op7.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                textDecoration: 'none',
+                transition: 'opacity 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                const text = e.currentTarget.querySelector('span')
+                const img = e.currentTarget.querySelector('img')
+                if (text) text.style.color = 'rgba(250, 245, 238, 0.85)'
+                if (img) img.style.opacity = '0.9'
+              }}
+              onMouseLeave={(e) => {
+                const text = e.currentTarget.querySelector('span')
+                const img = e.currentTarget.querySelector('img')
+                if (text) text.style.color = 'rgba(250, 245, 238, 0.45)'
+                if (img) img.style.opacity = '0.5'
+              }}
+            >
+              <span
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: '11px',
-                  letterSpacing: '0.06em',
-                  color: 'rgba(250, 245, 238, 0.55)',
-                  textDecoration: 'none',
+                  color: 'rgba(250, 245, 238, 0.45)',
                   transition: 'color 0.3s ease',
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.color = '#FAF5EE' }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(250, 245, 238, 0.55)' }}
               >
-                {item.label}
-              </a>
-            ))}
+                Desenvolvido por:
+              </span>
+              <img
+                src="https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/logo/op7/logo.svg"
+                alt="OP7"
+                style={{
+                  height: '14px',
+                  width: 'auto',
+                  opacity: 0.5,
+                  transition: 'opacity 0.3s ease',
+                }}
+              />
+            </a>
           </div>
         </div>
       </div>
