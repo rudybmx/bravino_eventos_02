@@ -211,7 +211,7 @@ export default function FooterCTA() {
             }}
           >
             <img
-              src="https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/landing_pages/bravino/logo_bravino_branca.png"
+              src="https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/landing_pages/bravino/logo_bravino_branca.svg"
               alt="Bravino"
               style={{
                 height: '24px',

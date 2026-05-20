@@ -52,7 +52,7 @@ export default function Nav() {
             src={
               scrolled
                 ? 'https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/landing_pages/bravino/logo_bravino_vermelha.png'
-                : 'https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/landing_pages/bravino/logo_bravino_branca.png'
+                : 'https://pub-db8ed4fb33634589a6ce5fb07e85cb46.r2.dev/landing_pages/bravino/logo_bravino_branca.svg'
             }
             alt="Bravino"
             style={{
