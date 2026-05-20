@@ -46,6 +46,7 @@ export default function Nav() {
             display: 'flex',
             alignItems: 'center',
             textDecoration: 'none',
+            flexShrink: 0,
           }}
         >
           <img
@@ -56,9 +57,10 @@ export default function Nav() {
             }
             alt="Bravino"
             style={{
-              height: '24px',
+              height: '36px',
               width: 'auto',
-              transition: 'opacity 0.3s ease',
+              display: 'block',
+              objectFit: 'contain',
             }}
           />
         </a>
