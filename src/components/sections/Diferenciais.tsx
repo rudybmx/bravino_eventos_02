@@ -10,7 +10,7 @@ const diferenciais = [
   {
     num: '01',
     title: 'Curadoria Velho & Novo Mundo',
-    body: 'França, Itália, Portugal, Argentina, Chile e Brasil — rótulos selecionados com rigor para cada ocasião.',
+    body: 'França, Itália, Portugal, Argentina, Chile e Brasil: rótulos selecionados com rigor para cada ocasião.',
   },
   {
     num: '02',

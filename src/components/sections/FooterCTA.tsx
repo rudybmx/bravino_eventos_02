@@ -103,7 +103,7 @@ export default function FooterCTA() {
             opacity: 0,
           }}
         >
-          Wine Bar, Vinho no Deck ou Mezanino — cada uma conta uma história diferente.
+          Wine Bar, Vinho no Deck ou Mezanino, cada uma conta uma história diferente.
         </p>
 
         {/* CTAs */}

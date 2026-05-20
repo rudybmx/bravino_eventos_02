@@ -79,14 +79,23 @@ export default function Nav() {
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: '13px',
-                fontWeight: 400,
+                fontWeight: 600,
                 letterSpacing: '0.08em',
-                color: scrolled ? 'rgba(45,35,32,0.58)' : 'rgba(250, 245, 238, 0.65)',
+                background: scrolled
+                  ? 'linear-gradient(135deg, #A37E44 0%, #765727 100%)'
+                  : 'linear-gradient(135deg, #FFE2B7 0%, #C9A46B 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                display: 'inline-block',
                 textDecoration: 'none',
-                transition: 'color 0.3s ease',
+                transition: 'opacity 0.3s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = scrolled ? '#2D2320' : '#FAF5EE')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = scrolled ? 'rgba(45,35,32,0.58)' : 'rgba(250, 245, 238, 0.65)')}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.opacity = '0.7'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.opacity = '1'
+              }}
             >
               {item}
             </a>
@@ -101,23 +110,27 @@ export default function Nav() {
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: '13px',
-            fontWeight: 500,
+            fontWeight: 600,
             letterSpacing: '0.08em',
-            color: scrolled ? '#7B1F35' : '#FAF5EE',
+            background: 'linear-gradient(135deg, #C9A46B 0%, #A37E44 100%)',
+            color: '#2D2320',
             textDecoration: 'none',
             padding: '9px 22px',
-            border: scrolled ? '1px solid rgba(123,31,53,0.6)' : '1px solid rgba(250, 245, 238, 0.5)',
+            border: 'none',
             borderRadius: '100px',
             transition: 'all 0.3s ease',
             whiteSpace: 'nowrap',
+            boxShadow: '0 2px 10px rgba(201, 164, 107, 0.15)',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = scrolled ? 'rgba(123,31,53,0.12)' : 'rgba(250, 245, 238, 0.12)'
-            e.currentTarget.style.borderColor = scrolled ? '#7B1F35' : '#FAF5EE'
+            e.currentTarget.style.background = 'linear-gradient(135deg, #FFE2B7 0%, #C9A46B 100%)'
+            e.currentTarget.style.transform = 'translateY(-1px)'
+            e.currentTarget.style.boxShadow = '0 4px 15px rgba(201, 164, 107, 0.3)'
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'transparent'
-            e.currentTarget.style.borderColor = scrolled ? 'rgba(123,31,53,0.6)' : 'rgba(250, 245, 238, 0.5)'
+            e.currentTarget.style.background = 'linear-gradient(135deg, #C9A46B 0%, #A37E44 100%)'
+            e.currentTarget.style.transform = 'translateY(0)'
+            e.currentTarget.style.boxShadow = '0 2px 10px rgba(201, 164, 107, 0.15)'
           }}
         >
           Reservar

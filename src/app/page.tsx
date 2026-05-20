@@ -21,7 +21,7 @@ export default function Home() {
         tag="Wine Bar"
         tagSub="Seg–Sex · 18h–22h"
         heading="O seu ritual de fim de tarde merece uma taça à altura."
-        body="Esqueça o happy hour comum. Na BRAVINO, você escolhe o rótulo diretamente da prateleira — e ele chega à sua taça na temperatura exata, com atendimento de quem realmente entende do assunto. Ambiente climatizado, petiscos selecionados e uma conversa que vale o horário."
+        body="Esqueça o happy hour comum. Na BRAVINO, você escolhe o rótulo diretamente da prateleira, e ele chega à sua taça na temperatura exata, com atendimento de quem realmente entende do assunto. Ambiente climatizado, petiscos selecionados e uma conversa que vale o horário."
         tags={['Vinhos em taça', 'Temperatura ideal', 'Petiscos', 'Seg–Sex 18h–22h', 'Climatizado']}
         ctaText="Quero ir esta semana"
         ctaHref="https://wa.me/5543991231069"
@@ -36,7 +36,7 @@ export default function Home() {
         tag="Vinho no Deck"
         tagSub="Todo sábado"
         heading="O sábado mais gostoso de Londrina começa aqui."
-        body="Ao ar livre, com boa música e a taça certa na mão — o Vinho no Deck é o evento que virou tradição entre quem ama vinho em Londrina. A vibe é descontraída, o público é animado e o cardápio é dominado por brancos vibrantes e rosés refrescantes."
+        body="Ao ar livre, com boa música e a taça certa na mão, o Vinho no Deck é o evento que virou tradição entre quem ama vinho em Londrina. A vibe é descontraída, o público é animado e o cardápio é dominado por brancos vibrantes e rosés refrescantes."
         tags={['Ao ar livre', 'Brancos & rosés', 'Música ao vivo', 'Todo sábado']}
         ctaText="Ver próxima edição"
         ctaHref="https://instagram.com/bravinowine"

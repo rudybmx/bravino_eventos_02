@@ -101,7 +101,9 @@ export default function Hero() {
             fontWeight: 800,
             lineHeight: 1.08,
             letterSpacing: '-0.02em',
-            color: '#FAF5EE',
+            background: 'linear-gradient(135deg, #FFE2B7 0%, #C9A46B 50%, #8C6A35 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
             maxWidth: '820px',
             marginBottom: '28px',
             opacity: 0,
@@ -125,7 +127,7 @@ export default function Hero() {
             opacity: 0,
           }}
         >
-          Na BRAVINO, o vinho é o ponto de partida — a celebração é o destino.
+          Na BRAVINO, o vinho é o ponto de partida, e a celebração é o destino.
         </p>
 
         {/* CTAs */}
@@ -143,24 +145,26 @@ export default function Hero() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '14px',
-              fontWeight: 500,
+              fontWeight: 600,
               letterSpacing: '0.05em',
-              color: '#FAF5EE',
+              background: 'linear-gradient(135deg, #C9A46B 0%, #A37E44 100%)',
+              color: '#2D2320',
               textDecoration: 'none',
               padding: '14px 32px',
-              border: '1px solid rgba(250, 245, 238, 0.55)',
+              border: 'none',
               borderRadius: '100px',
               transition: 'all 0.35s ease',
+              boxShadow: '0 4px 15px rgba(201, 164, 107, 0.15)',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = '#FAF5EE'
-              e.currentTarget.style.color = '#7B1F35'
-              e.currentTarget.style.borderColor = '#FAF5EE'
+              e.currentTarget.style.background = 'linear-gradient(135deg, #FFE2B7 0%, #C9A46B 100%)'
+              e.currentTarget.style.transform = 'translateY(-2px)'
+              e.currentTarget.style.boxShadow = '0 8px 25px rgba(201, 164, 107, 0.35)'
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'transparent'
-              e.currentTarget.style.color = '#FAF5EE'
-              e.currentTarget.style.borderColor = 'rgba(250, 245, 238, 0.55)'
+              e.currentTarget.style.background = 'linear-gradient(135deg, #C9A46B 0%, #A37E44 100%)'
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = '0 4px 15px rgba(201, 164, 107, 0.15)'
             }}
           >
             Explorar experiências
@@ -171,22 +175,24 @@ export default function Hero() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '14px',
-              fontWeight: 400,
+              fontWeight: 500,
               letterSpacing: '0.05em',
-              color: 'rgba(250, 245, 238, 0.7)',
+              color: '#C9A46B',
               textDecoration: 'none',
               padding: '14px 32px',
-              border: '1px solid rgba(250, 245, 238, 0.2)',
+              border: '1px solid #C9A46B',
               borderRadius: '100px',
               transition: 'all 0.35s ease',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(250, 245, 238, 0.65)'
-              e.currentTarget.style.color = '#FAF5EE'
+              e.currentTarget.style.background = 'rgba(201, 164, 107, 0.08)'
+              e.currentTarget.style.borderColor = '#FFE2B7'
+              e.currentTarget.style.color = '#FFE2B7'
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(250, 245, 238, 0.2)'
-              e.currentTarget.style.color = 'rgba(250, 245, 238, 0.7)'
+              e.currentTarget.style.background = 'transparent'
+              e.currentTarget.style.borderColor = '#C9A46B'
+              e.currentTarget.style.color = '#C9A46B'
             }}
           >
             Ver programação
